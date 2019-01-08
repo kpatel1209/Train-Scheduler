@@ -1,0 +1,16 @@
+img.d-block {
+    height: 200px;
+    width: auto;
+}
+
+.jumbotron {
+    
+}
+
+form {
+    margin-top: 50px;
+}
+
+label {
+    font-weight: bold;
+}
