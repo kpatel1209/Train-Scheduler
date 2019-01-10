@@ -56,7 +56,7 @@ let config = {
         let firstTrain = trainData.trainTime;
 
         // Calculate the minutes until arrival
-        let remainderTrain = moment().diff(moment.unix(firstTrain), "minutes") % trainFrequency;
+        let remainderTrain = moment().diff(moment.unix(firstTrain), "minutes") %  vtrainFrequency;
         let minutesTrain = trainFrequency - remainderTrain;
 
         // Calculate the arrival time, add the minutesTime to the current time
@@ -70,7 +70,6 @@ let config = {
                 "</td><td>" + arrivalTrain + 
                 "</td><td>" + minutesTrain + 
                 "</td></tr>")
-    
 });
 
 
