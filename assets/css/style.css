@@ -1,10 +1,26 @@
-.jumbotron {
-    margin-top: 15px;
-    border: 8px #337ab7 solid;
+body {
+    background: lightgrey;
 }
 
-h3 {
+.jumbotron {
+    background-image: url(/assets/images/train.jpg);
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    border: 5px black solid;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Fredericka the Great', cursive;
+    letter-spacing: 6px;
+}
+
+h2, h3 {
     font-weight: bold;
+}
+
+h2 {
+    font-size: 50px;
 }
 
 .panel-heading {
