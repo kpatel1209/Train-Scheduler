@@ -3,7 +3,7 @@ body {
 }
 
 .jumbotron {
-    background-image: url(/assets/images/train.jpg);
+    background-image: url(../images/train.jpg);
     background-repeat: no-repeat;
     margin-top: 15px;
     border: 5px black solid;    
