@@ -26,3 +26,7 @@ h2 {
 .panel-heading {
     background: black;
 }
+
+.panel-primary {
+    border: 5px black solid;    
+}

@@ -9,10 +9,10 @@ let config = {
   };
   firebase.initializeApp(config);
 
-// Database variable
+// Variable for Firebase database
 let database = firebase.database();
 
-// On click function to submit new train schedule
+// On click function to add a new train schedule
 $("#submit-train-btn").on("click", function(event){
     event.preventDefault();
 
@@ -30,7 +30,7 @@ $("#submit-train-btn").on("click", function(event){
         frequency: trainFrequency
     };
 
-    // Push the new tran data into Firebase
+    // Push the new train data into the Firebase database
     database.ref().push(newTrainData);
 
     console.log(newTrainData.name);
@@ -38,7 +38,7 @@ $("#submit-train-btn").on("click", function(event){
     console.log(newTrainData.firstTime);
     console.log(newTrainData.frequency);
 
-    // Clear the values from the form after submitting new train data
+    // Clear the values from the form after submitting the new train data
     $("#train-name").val("");
     $("#train-destination").val("");
     $("#train-first-time").val("");
@@ -50,10 +50,12 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
     console.log(childSnapshot.val());
 
     // Variables to store snapshots
-    let trainName = childSnapshot.val().name;
-    let trainDestination = childSnapshot.val().destination;
-    let firstTrainTime = childSnapshot.val().firstTime;
-    let trainFrequency = childSnapshot.val().frequency;
+    let data = childSnapshot.val();
+
+    let trainName = data.name;
+    let trainDestination = data.destination;
+    let firstTrainTime = data.firstTime;
+    let trainFrequency = data.frequency;
 
     console.log(trainName);
     console.log(trainDestination);
