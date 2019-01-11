@@ -19,14 +19,43 @@
     <div class="container">
     
         <!-- Header: Jumbotron -->
-        <div class="jumbotron jumbotron-fluid text-center">
+        <div class="jumbotron jumbotron-fluid text-center sticky-top">
             <h1 class="display-4 text-center"><strong>Chugga-Chugga Choo-Choo!</strong></h1>
             <h2>Train Scheduler</h2>
         </div>
 
         <!-- Current Train Schedule -->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <h3 class="panel-title">Add Train</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Train Name</label>
+                                <input type="text" class="form-control" id="train-name" placeholder="What is the name of the train?">
+                            </div>
+                            <div class="form-group">
+                                <label>Destination</label>
+                                <input type="text" class="form-control" id="train-destination" placeholder="Where is the train going?">
+                            </div>
+                            <div class="form-group">
+                                <label>First Train Time (hh:mm - Military Time)</label>
+                                <input type="text" class="form-control" id="train-first-time" placeholder="hh:mm">
+                            </div>
+                            <div class="form-group">
+                                <label>Frequency (minutes)</label>
+                                <input type="text" class="form-control" id="train-frequency">
+                            </div>
+                            <button class="btn" id="submit-train-btn" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">
                         <h3 class="panel-title">Current Train Schedule</h3>
@@ -47,35 +76,11 @@
                     </div>
                 </div>
             </div>
+
         </div>
         
         <!-- Add Train -->
-        <div class="panel panel-primary">
-            <div class="panel-heading text-center">
-                <h3 class="panel-title">Add Train</h3>
-            </div>
-            <div class="panel-body">
-                <form>
-                    <div class="form-group">
-                        <label>Train Name</label>
-                        <input type="text" class="form-control" id="train-name" placeholder="What is the name of the train?">
-                    </div>
-                    <div class="form-group">
-                        <label>Destination</label>
-                        <input type="text" class="form-control" id="train-destination" placeholder="Where is the train going?">
-                    </div>
-                    <div class="form-group">
-                        <label>First Train Time (hh:mm - Military Time)</label>
-                        <input type="text" class="form-control" id="train-first-time" placeholder="hh:mm">
-                    </div>
-                    <div class="form-group">
-                        <label>Frequency (minutes)</label>
-                        <input type="text" class="form-control" id="train-frequency">
-                    </div>
-                    <button class="btn" id="submit-train-btn" type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
+        
     </div>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
