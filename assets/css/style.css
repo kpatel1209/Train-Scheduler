@@ -35,3 +35,17 @@ h2 {
 .panel-primary {
     border: 5px black solid;    
 }
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    height: 4%;
+    font-weight: bold;
+    padding: 6px 0 0 0;
+    font-family: 'Roboto', sans-serif;
+}
