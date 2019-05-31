@@ -1,90 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Train Scheduler</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Scheduler</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+
 </head>
+
 <body>
-     
-    <div class="container">
-    
-        <!-- Header: Jumbotron -->
-        <div class="jumbotron jumbotron-fluid text-center sticky-top">
-            <h1 class="display-4 text-center"><strong>Chugga-Chugga Choo-Choo!</strong></h1>
-            <h2>Train Scheduler</h2>
-        </div>
 
-        <!-- Current Train Schedule -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading text-center">
-                        <h3 class="panel-title">Add Train</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form>
-                            <div class="form-group">
-                                <label>Train Name</label>
-                                <input type="text" class="form-control" id="train-name" placeholder="What is the name of the train?">
-                            </div>
-                            <div class="form-group">
-                                <label>Destination</label>
-                                <input type="text" class="form-control" id="train-destination" placeholder="Where is the train going?">
-                            </div>
-                            <div class="form-group">
-                                <label>First Train Time (hh:mm - Military Time)</label>
-                                <input type="text" class="form-control" id="train-first-time" placeholder="hh:mm">
-                            </div>
-                            <div class="form-group">
-                                <label>Frequency (minutes)</label>
-                                <input type="text" class="form-control" id="train-frequency">
-                            </div>
-                            <button class="btn" id="submit-train-btn" type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
 
-            <div class="col-md-8">
-                <div class="panel panel-primary">
-                    <div class="panel-heading text-center">
-                        <h3 class="panel-title">Current Train Schedule</h3>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-hover" id="current-train-schedule">
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="text-center">Train Name</th>
-                                    <th scope="col" class="text-center">Destination</th>
-                                    <th scope="col" class="text-center">Frequency (minutes)</th>
-                                    <th scope="col" class="text-center">Next Arrival (EST)</th>
-                                    <th scope="col" class="text-center">Minutes Away</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        
-        <!-- Add Train -->
-        
+    <!-- Header: Jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-center sticky-top">
+      <h1 class="display-4 text-center"><strong>Chugga-Chugga Choo-Choo!</strong></h1>
+      <h2>Train Scheduler</h2>
     </div>
-    
-    <footer>&copy; Copyright 2019 Kevin Patel</footer>
 
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- Current Train Schedule -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h3 class="panel-title">Add Train</h3>
+          </div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label>Train Name</label>
+                <input type="text" class="form-control" id="train-name" placeholder="What is the name of the train?">
+              </div>
+              <div class="form-group">
+                <label>Destination</label>
+                <input type="text" class="form-control" id="train-destination" placeholder="Where is the train going?">
+              </div>
+              <div class="form-group">
+                <label>First Train Time (hh:mm - Military Time)</label>
+                <input type="text" class="form-control" id="train-first-time" placeholder="hh:mm">
+              </div>
+              <div class="form-group">
+                <label>Frequency (minutes)</label>
+                <input type="text" class="form-control" id="train-frequency">
+              </div>
+              <button class="btn" id="submit-train-btn" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h3 class="panel-title">Current Train Schedule</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-hover" id="current-train-schedule">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-center">Train Name</th>
+                  <th scope="col" class="text-center">Destination</th>
+                  <th scope="col" class="text-center">Frequency (minutes)</th>
+                  <th scope="col" class="text-center">Next Arrival (EST)</th>
+                  <th scope="col" class="text-center">Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody class="text-center"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Add Train -->
+
+  </div>
+
+  <footer class="page-footer font-small bg-secondary">
+    <div class="footer-copyright text-center py-3">Copyright © 2019: Kevin Patel
+      <!-- <a href="#page-top" id="footer-project-name"> Kevin Patel</a> -->
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
+
 </html>

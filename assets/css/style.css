@@ -1,51 +1,56 @@
 body {
-    background: lightgrey;
+  background: lightgrey;
 }
 
 .jumbotron {
-    background-image: url(../images/train.jpg);
-    background-repeat: no-repeat;
-    margin-top: 15px;
-    border: 5px black solid;    
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: 'Fredericka the Great', cursive;
-    letter-spacing: 6px;
+  background-image: url(../images/train.jpg);
+  background-repeat: no-repeat;
+  margin-top: 15px;
+  border: 5px black solid;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Fredericka the Great', cursive;
+  letter-spacing: 6px;
 }
 
-h2, h3 {
-    font-weight: bold;
+h2,
+h3 {
+  font-weight: bold;
 }
 
 .panel-title {
-    font-size: 25px;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+  font-size: 25px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
 }
 
 h2 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .panel-heading {
-    background: black;
+  background: black;
 }
 
 .panel-primary {
-    border: 5px black solid;    
+  border: 5px black solid;
 }
 
 footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: steelblue;
-    color: white;
-    text-align: center;
-    height: 4%;
-    font-weight: bold;
-    padding: 6px 0 0 0;
-    font-family: 'Roboto', sans-serif;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+  height: 4%;
+  font-weight: bold;
+  padding: 12px 0 0 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-copyright {
+  padding: 0 0 10px 0;
 }
