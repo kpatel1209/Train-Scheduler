@@ -1,4 +1,4 @@
-# Train-Scheduler
+# HW #7 - Train-Scheduler
 This project shows the most up-to-date train information and scheduling for the fictional Chugga-Chugga Choo-Choo
 Train Scheduler. Users have the ability to add information on a new train and can check the status of the existing
 trains on the schedule.
